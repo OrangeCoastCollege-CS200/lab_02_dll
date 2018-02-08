@@ -47,19 +47,19 @@ public:
 	~DoublyList();
 	
 	// Declaration copy constructor
-	
+	DoublyList(const DoublyList& other);
 
 	// Declaration move constructor
-	
+	DoublyList(DoublyList&& other);
 
 	// Declaration overloaded assignment operator
-	
+	DoublyList operator=(const DoublyList& other);
 
 	// Declaration move assignment operator
-	
+	DoublyList operator=(DoublyList&& other);
 
 	// Declaration switchEveryTwo
-	
+	void switchEveryTwo()const;
 
 private:
     Node *first;	
