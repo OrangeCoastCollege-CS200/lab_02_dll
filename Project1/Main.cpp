@@ -15,11 +15,11 @@ using namespace std;
 
 int main()
 {
-	//test_copyConstructor();
-	//test_moveConstructor();
-	//test_assignmentOperator();
-	//test_moveAssignmentOperator();
-	//test_cases();
+	test_copyConstructor();
+	test_moveConstructor();
+	test_assignmentOperator();
+	test_moveAssignmentOperator();
+	test_cases();
 
 	cout << endl;
 	system("Pause");

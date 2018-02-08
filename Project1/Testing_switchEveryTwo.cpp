@@ -34,7 +34,7 @@ void test_cases()
 			Uncomment when testing
 		******************************************************/
 
-		//list.switchEveryTwo();
+		list.switchEveryTwo();
 
 		/*****************************************************/
 		cout << "New list: " << list;

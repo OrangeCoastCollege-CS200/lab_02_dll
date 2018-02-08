@@ -53,13 +53,13 @@ public:
 	DoublyList(DoublyList&& other);
 
 	// Declaration overloaded assignment operator
-	DoublyList operator=(const DoublyList& other);
+	DoublyList &operator=(const DoublyList& other);
 
 	// Declaration move assignment operator
-	DoublyList operator=(DoublyList&& other);
+	DoublyList& operator=(DoublyList&& other);
 
 	// Declaration switchEveryTwo
-	void switchEveryTwo()const;
+	void switchEveryTwo();
 
 private:
     Node *first;	
