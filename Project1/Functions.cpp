@@ -31,11 +31,6 @@ DoublyList::DoublyList(DoublyList&& other) {
 // Definition overloaded assignment operator
 DoublyList& DoublyList::operator=(const DoublyList& other) {
 	destroyList();
-	count = other.count;
-	if (count != 0)
-		first = new Node(*other.first);
-	else
-		first = nullptr;
 	Node* curr = other.first;
 	while (curr != nullptr) {
 		insertBack(curr->getData());
@@ -82,7 +77,12 @@ void DoublyList::switchEveryTwo() {
 		if (newCount != count) {
 			Node* temp = first;
 			first = last;
+			first->setNext(last->getNext());
 			last = temp;
+			last->setPrev(first->getPrev());
+			last->setNext(nullptr);
+			first->setPrev(nullptr);
+			
 		} else {
 			last = curr;
 	}
