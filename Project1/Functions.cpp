@@ -77,7 +77,7 @@ void DoublyList::switchEveryTwo() {
 			last = last->getPrev();
 			last->setNext(nullptr);
 			temp->setPrev(nullptr);
-			temp->setNext(first->getNext());
+			temp->setNext(first->getPrev());
 			first->getPrev()->setPrev(temp);
 			first = temp;
 		}
